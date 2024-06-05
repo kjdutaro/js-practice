@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    width: 320px;
+    border: 2px darkslategray solid;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.pads {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}
+
+button {
+    width: 72px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: normal;
+    border-radius: 25%;
+}
+
+.btn-num {
+    background: lightgray;
+    border: 1px solid gray;
+}
+
+.btn-equal {
+    background: lightsalmon;
+    border: 1px solid salmon;
+}
+
+.btn-symbols {
+    background: lightblue;
+    border: 1px solid skyblue;
+}
+
+.result {
+    height: 50px;
+    width: 300px;
+    border: 1px lightgray solid;
+    background: whitesmoke;
+    text-align: right;
+    color: gray;
+    margin:auto;
+    font-size: 50px;
+    border-radius: 5px;
+    padding: 0px 5px 5px 0px;
+    overflow: none auto;
+}
