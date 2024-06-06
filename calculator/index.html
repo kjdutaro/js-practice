@@ -10,33 +10,33 @@
     <div class="container">
       <form action="">
         <div>
-            <div class="result" id="result">0</>
-        </div>
+            <input class="result" id="result" value="0" readonly>
+        </>
         <div class="pads">
-          <button class="btn-symbols" onclick="rightPar()">(</button>
-          <button class="btn-symbols" onclick="leftPar()">)</button>
+          <button class="btn-symbols" onclick="allClear()">AC</button>
+          <button class="btn-symbols" onclick="cancel()">C</button>
           <button class="btn-symbols" onclick="modulo()">%</button>
-          <button class="btn-symbols" onclick="AC()">AC</button>
+          <button class="btn-symbols" onclick="divide()">/</button>
 
           <button class="btn-num" onclick="seven()">7</button>
           <button class="btn-num" onclick="eight()">8</button>
           <button class="btn-num" onclick="nine()">9</button>
-          <button class="btn-symbols" onclick="divide()">/</button>
+          <button class="btn-symbols" onclick="multiply()">*</button>
 
           <button class="btn-num" onclick="four()">4</button>
           <button class="btn-num" onclick="five()">5</button>
           <button class="btn-num" onclick="six()">6</button>
-          <button class="btn-symbols" onclick="multiply()">*</button>
+          <button class="btn-symbols" onclick="minus()">-</button>
 
           <button class="btn-num" onclick="one()">1</button>
           <button class="btn-num" onclick="two()">2</button>
           <button class="btn-num" onclick="three()">3</button>
-          <button class="btn-symbols" onclick="minus()">-</button>
+          <button class="btn-symbols" onclick="plus()">+</button>
 
           <button class="btn-num" onclick="zero()">0</button>
           <button class="btn-num" onclick="dot()">.</button>
+          <button class="btn-num" onclick="zeros()">00</button>
           <button class="btn-equal" onclick="equals()">=</button>
-          <button class="btn-symbols" onclick="plus()">+</button>
         </div>
       </form>
     </div>

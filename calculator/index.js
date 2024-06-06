@@ -1,113 +1,69 @@
-let result = document.getElementById("result")
-let resValue = result.value
-console.log(resValue)
+let result = document.getElementById("result");
 
-function checker(res, input) {
-    if (res == 0) {
-        result.textContent = input
-    } else if (res != 0) {
-        result.textContent += input
-        console.log(resValue)
+function getResult() {
+    return result.value;
+}
+
+function setResult(value) {
+    result.value = value;
+}
+
+function appendValue(value) {
+    let res = getResult();
+    if (res === "0") {
+        setResult(value);
+    } else {
+        setResult(res + value);
     }
 }
 
-function one(){
-    let input = 1
-    checker(resValue, input)
+function clearResult() {
+    setResult("0");
 }
 
-function two(){
-    let input = 2
-    checker(resValue, input)
+function cancel() {
+    let res = getResult();
+    if (res.length > 1) {
+        setResult(res.slice(0, -1));
+    } else {
+        setResult("0");
+    }
 }
 
-function three(){
-    let input = 3
-    checker(resValue, input)
+function evaluateResult() {
+    try {
+        setResult(eval(getResult()));
+    } catch {
+        setResult("Error");
+    }
 }
 
-function four(){
-    let input = 4
-    checker(resValue, input)
-}
+// Add event listeners to prevent default form submission behavior
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+    });
+});
 
-function five(){
-    let input = 5
-    checker(resValue, input)
-}
 
-function six(){
-    let input = 6
-    checker(resValue, input)
-}
-
-function seven(){
-    let input = 7
-    checker(resValue, input)
-}
-
-function eight(){
-    let input = 8
-    checker(resValue, input)
-}
-
-function nine(){
-    let input = 9
-    checker(resValue, input)
-}
-
-function zero(){
-    let input = 0
-    checker(resValue, input)
-}
-
-function rightPar(){
-    let input = '('
-    checker(resValue, input)
-}
-
-function leftPar(){
-    let input = ')'
-    checker(resValue, input)
-}
-
-function modulo(){
-    let input = '%'
-    checker(resValue, input)
-}
-
-function AC(){
-    let input = 0
-    result.innerText = input
-}
-
-function divide(){
-    let input = '/'
-    checker(resValue, input)
-}
-
-function multiply(){
-    let input = '*'
-    checker(resValue, input)
-}
-
-function minus(){
-    let input = '-'
-    checker(resValue, input)
-}
-
-function plus(){
-    let input = '+'
-    checker(resValue, input)
-}
-
-function dot(){
-    let input = '.'
-    checker(resValue, input)
-}
-
-function equals() {
-    let input = resValue
-    result.innerText = input
-
-}
+// Function mapping for buttons
+function one() { appendValue('1'); }
+function two() { appendValue('2'); }
+function three() { appendValue('3'); }
+function four() { appendValue('4'); }
+function five() { appendValue('5'); }
+function six() { appendValue('6'); }
+function seven() { appendValue('7'); }
+function eight() { appendValue('8'); }
+function nine() { appendValue('9'); }
+function zero() { appendValue('0'); }
+function zeros() { appendValue('00'); }
+function modulo() { appendValue('%'); }
+function divide() { appendValue('/'); }
+function multiply() { appendValue('*'); }
+function minus() { appendValue('-'); }
+function plus() { appendValue('+'); }
+function dot() { appendValue('.'); }
+function allClear() { clearResult(); }
+function cancel() { cancel(); }
+function equals() { evaluateResult(); }

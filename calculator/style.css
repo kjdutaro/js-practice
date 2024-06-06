@@ -54,6 +54,6 @@ button {
     margin:auto;
     font-size: 50px;
     border-radius: 5px;
-    padding: 0px 5px 5px 0px;
-    overflow: none auto;
+    padding: 0px 5px;
+    overflow: auto;
 }
