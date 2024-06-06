@@ -41,7 +41,6 @@ function evaluateResult() {
     }
 }
 
-// Add event listeners to prevent default form submission behavior
 document.querySelectorAll("button").forEach(button => {
     button.addEventListener("click", function(event) {
         event.preventDefault()
