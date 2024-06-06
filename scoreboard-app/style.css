@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.container {
+    padding: 10px;
+    border-radius: 50px;
+    width: 600px;
+    height: 400px;
+    background-color: #1B244A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.child {
+    display: flex;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score {
+
+}
+
+.btns {
+
+}
+
+.btn-input {
+
+}
+
+.new-game {
+
+}
