@@ -1,6 +1,6 @@
 let counter = document.getElementById("counter")
 let previous = document.getElementById("previous")
-let count = 0
+let count = 10
 
 function increment() {
     count += 1
